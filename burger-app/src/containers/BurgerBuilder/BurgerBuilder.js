@@ -1,12 +1,13 @@
 import React, { Component } from 'react'
 import Aux from '../../hoc/Aux'
+import Burger from '../../components/Burger/Burger'
 
 class BurgerBuilder extends Component{
     render(){
         return(
             <Aux> 
                 {/* want to return 2 json components */}
-            <div> Burger</div>
+            <Burger></Burger>
             <div> Build  controls</div>
             </Aux>
         );
