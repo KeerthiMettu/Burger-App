@@ -37,6 +37,7 @@ const queryHandler = e => {
   //to stop the page refresh continuously
   e.preventDefault(); 
   setQuery(search); //sets the query after entering text in textbox
+  setSearch(""); //resets the text to empty 
 }
 
 
@@ -54,6 +55,7 @@ const queryHandler = e => {
           title={recipe.recipe.label}
           calories={recipe.recipe.calories} carblabel ={recipe.recipe.dietLabels[0]}
           image={recipe.recipe.image}
+          ingredients = {recipe.recipe.ingredients}
         />
       ))}
     </div>
