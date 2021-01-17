@@ -43,12 +43,13 @@ const queryHandler = e => {
 
   return (
     <div className="App">
-      <h1> Hello React</h1>
+      <h1> Recipes App</h1>
       <form className="form" onSubmit={queryHandler} >
         <input className="search-text" type="text" value ={search} onChange={updateSearchHandler} />
-        <button type="submit" > Search</button>
+        <button className="button" type="submit" > Search</button>
         {/* <h2 onClick={()=> setCounter(counter+1)}> {counter}</h2> */}
       </form>
+      <div className="content">
       {recipes.map((recipe) => (
         <Recipe
         key ={recipe.recipe.label}
@@ -58,6 +59,7 @@ const queryHandler = e => {
           ingredients = {recipe.recipe.ingredients}
         />
       ))}
+      </div>
     </div>
   );
 }
